@@ -1,5 +1,3 @@
-const liElement = document.getElementsByTagName("li");
-
 // for (let index = 0; index < liElement.length; index++) {
 //     console.log(liElement[index].textContent);
 
@@ -7,25 +5,34 @@ const liElement = document.getElementsByTagName("li");
 
 // //console.log(liElement);
 
-//declaração de arrays
-let num1 = [1,2,3,4,5];
-let num2 = [6,7,8,9,10];
-let num3 = [num1, num2];
+// //declaração de arrays
+// let num1 = [1,2,3,4,5];
+// let num2 = [6,7,8,9,10];
+// //espalhar o array com SPREAD [...]
+// let num3 = [...num1, ...num2];
 
-console.log(`Array 1: ${num1}`);
-console.log(`Array 2: ${num2}`);
-console.log(`Array 3: ${num3}`);
+// console.log(`Array 1: ${num1}`);
+// console.log(`Array 2: ${num2}`);
+// console.log(`Array 3: ${num3}`);
+
+// //Listando o array com map
+// num3.map((numero, key)=>{
+
+//     console.log(`${(key + 1)} - Itens do array - ${numero}`);
+// })
+//convertendo html collection em array de forma indireta
+const liElementHtml = document.getElementsByTagName("li");
+const liElementArray = [...liElementHtml]
+
+liElementArray.map((item, key)=>{
+    if (item.textContent == "item-39") {
+        console.log(`${key + 1} - ${item.textContent = "LOCALIZADO"}`)
+        
+    }
+})
+
 
 //Listando o Array - Técnica especial
 // num3.forEach((itemDoArray)=>{
 //     console.log(`Array 3 sendo listado: ${itemDoArray}`)
 // })
-
-//Listando o array com map
-num3.map((numero, key)=>{
-
-    console.log(`${(key + 1)} - Itens do array - ${numero}`);
-    numero.forEach((digitos)=>{
-        console.log(digitos)
-    })
-})
