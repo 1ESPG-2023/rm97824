@@ -77,13 +77,31 @@
 
 // }
 // mudaCor();
+let temp = "";
+
 function mudaImg() {
-    let nr = Math.round(Math.random() * 3);
+    let nr = Math.round(Math.random() * 2);
+    let nr2 = Math.round(Math.random() * 2);
+    let nr3 = Math.round(Math.random() * 2);
 
     let caminho = `../img/banner-lateral-${nr}.png`
+    let caminho2 = `../img/banner-lateral-${nr2}.png`
+    let caminho3 = `../img/banner-lateral-${nr3}.png`
 
     const img1 = document.querySelector(".l-e>img")
     img1.src = caminho;
+
+    const img2 = document.querySelector(".l-d>img")
+    img2.src = caminho2;
+
+    const img3 = document.querySelector(".central>img")
+    img3.src = caminho3;
+
+    temp = setTimeout(mudaImg, 2000)
+
+    console.log(caminho)
+    console.log(caminho2)
+    console.log(caminho3)
 }
 
 mudaImg();
