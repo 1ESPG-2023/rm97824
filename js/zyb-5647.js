@@ -54,26 +54,36 @@
 //     setTimeout(alert("EXECUTOU"), 5000)
 // }
 
-let tmp = "";
+// let tmp = "";
 
-function mudaCor() {
-    let r = "";
-    let g = "";
-    let b = "";
+// function mudaCor() {
+//     let r = "";
+//     let g = "";
+//     let b = "";
 
     //Math.random = gera números aleatórios entre 0 e 1
     //ceil, floor e round = que arredondam o némero para cima, para baixo ou aleatóriamente
 
     //Determinando para a váriavel r um valor entre 0 e 255
-    r = Math.round(Math.random() * 255);
-    g = Math.round(Math.random() * 255);
-    b = Math.round(Math.random() * 255);
+    // r = Math.round(Math.random() * 255);
+    // g = Math.round(Math.random() * 255);
+    // b = Math.round(Math.random() * 255);
     
-    const cabecalho = document.querySelector(".cabecalho");
+    // const cabecalho = document.querySelector(".cabecalho");
 
-    cabecalho.setAttribute("style", `background-color:rgb(${r}, ${g}, ${b})`);
+    // cabecalho.setAttribute("style", `background-color:rgb(${r}, ${g}, ${b})`);
 
-    tmp = setTimeout(mudaCor, 2000);
+    // tmp = setTimeout(mudaCor, 2000);
 
+// }
+// mudaCor();
+function mudaImg() {
+    let nr = Math.round(Math.random() * 3);
+
+    let caminho = `../img/banner-lateral-${nr}.png`
+
+    const img1 = document.querySelector(".l-e>img")
+    img1.src = caminho;
 }
-mudaCor();
+
+mudaImg();

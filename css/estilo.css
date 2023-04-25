@@ -16,16 +16,20 @@
     background-color: blueviolet;
 }
 
-.container .central{
+.container .central img{
     flex-grow: 5;
+    width: 500px;
+    height: 350px;
 }
 
-.container .l-e{
+.container .l-e img{
     flex-grow: 1;
     background-color: aqua;
+    height: 350px;
 }
 
-.container .l-d{
+.container .l-d img{
     flex-grow: 1;
     background-color: rgb(60, 255, 86);
+    height: 350px;
 }
