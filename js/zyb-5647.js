@@ -105,3 +105,29 @@ function mudaImg() {
 }
 
 mudaImg();
+let contador = 0;
+function onOff() {
+    const imgLampada = document.querySelector(".imgBull")
+    const imgOff = "../img/pic_bulboff.gif"
+    const imgOn = "../img/pic_bulbon.gif"
+
+    imgLampada.src = imgOff
+    const botao = document.querySelector(".botao")
+
+    botao.addEventListener("click", ()=>{
+
+        if (contador % 2 != 0) {
+            contador = 0
+            imgLampada.src = imgOff
+            botao.textContent = "Ligar"
+        }
+        else {
+            imgLampada.src = imgOn
+            botao.textContent = "Desligar"
+            contador = 1
+        }
+    console.log(contador)
+    })
+    
+}
+onOff()

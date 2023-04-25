@@ -33,3 +33,20 @@
     background-color: rgb(60, 255, 86);
     height: 350px;
 }
+
+.rodape img{
+    width: 100px;
+}
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 20vw;
+    gap: 10px;
+    
+}
+
+.botao {
+    height: 50px;
+}
