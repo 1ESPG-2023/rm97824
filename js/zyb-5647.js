@@ -37,19 +37,43 @@
 //     console.log(`Array 3 sendo listado: ${itemDoArray}`)
 // })
 
-function soma(p1, p2, p3) {
-    num1 = p1;
-    num2 = p2;
+// function soma(p1, p2, p3) {
+//     num1 = p1;
+//     num2 = p2;
 
-    return (parseInt(num1) + parseInt(num2) + parseInt(p3))
-    // console.log(`Resultado: ${parseInt(num1) + parseInt(num2) + parseInt(parametro)}`);
-    // console.log(`Este é o parâmetro que foi passado: ${parametro}`);
+//     return (parseInt(num1) + parseInt(num2) + parseInt(p3))
+//     // console.log(`Resultado: ${parseInt(num1) + parseInt(num2) + parseInt(parametro)}`);
+//     // console.log(`Este é o parâmetro que foi passado: ${parametro}`);
+// }
+
+// //ARROW FUNCTION
+
+// const mudaCor = () => {
+
+//     //FUNÇÃO SET-TIME-OUT
+//     setTimeout(alert("EXECUTOU"), 5000)
+// }
+
+let tmp = "";
+
+function mudaCor() {
+    let r = "";
+    let g = "";
+    let b = "";
+
+    //Math.random = gera números aleatórios entre 0 e 1
+    //ceil, floor e round = que arredondam o némero para cima, para baixo ou aleatóriamente
+
+    //Determinando para a váriavel r um valor entre 0 e 255
+    r = Math.round(Math.random() * 255);
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
+    
+    const cabecalho = document.querySelector(".cabecalho");
+
+    cabecalho.setAttribute("style", `background-color:rgb(${r}, ${g}, ${b})`);
+
+    tmp = setTimeout(mudaCor, 2000);
+
 }
-
-//ARROW FUNCTION
-
-const mudaCor = () => {
-
-    //FUNÇÃO SET-TIME-OUT
-    setTimeout(alert("EXECUTOU"), 5000)
-}
+mudaCor();
