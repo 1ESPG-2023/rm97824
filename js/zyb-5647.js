@@ -77,57 +77,75 @@
 
 // }
 // mudaCor();
-let temp = "";
+// let temp = "";
 
-function mudaImg() {
-    let nr = Math.round(Math.random() * 2);
-    let nr2 = Math.round(Math.random() * 2);
-    let nr3 = Math.round(Math.random() * 2);
+// function mudaImg() {
+//     let nr = Math.round(Math.random() * 2);
+//     let nr2 = Math.round(Math.random() * 2);
+//     let nr3 = Math.round(Math.random() * 2);
 
-    let caminho = `../img/banner-lateral-${nr}.png`
-    let caminho2 = `../img/banner-lateral-${nr2}.png`
-    let caminho3 = `../img/banner-lateral-${nr3}.png`
+//     let caminho = `../img/banner-lateral-${nr}.png`
+//     let caminho2 = `../img/banner-lateral-${nr2}.png`
+//     let caminho3 = `../img/banner-lateral-${nr3}.png`
 
-    const img1 = document.querySelector(".l-e>img")
-    img1.src = caminho;
+//     const img1 = document.querySelector(".l-e>img")
+//     img1.src = caminho;
 
-    const img2 = document.querySelector(".l-d>img")
-    img2.src = caminho2;
+//     const img2 = document.querySelector(".l-d>img")
+//     img2.src = caminho2;
 
-    const img3 = document.querySelector(".central>img")
-    img3.src = caminho3;
+//     const img3 = document.querySelector(".central>img")
+//     img3.src = caminho3;
 
-    temp = setTimeout(mudaImg, 2000)
+//     temp = setTimeout(mudaImg, 2000)
 
-    console.log(caminho)
-    console.log(caminho2)
-    console.log(caminho3)
-}
+//     // console.log(caminho)
+//     // console.log(caminho2)
+//     // console.log(caminho3)
+// }
 
-mudaImg();
-let contador = 0;
-function onOff() {
-    const imgLampada = document.querySelector(".imgBull")
-    const imgOff = "../img/pic_bulboff.gif"
-    const imgOn = "../img/pic_bulbon.gif"
+// mudaImg();
 
-    imgLampada.src = imgOff
-    const botao = document.querySelector(".botao")
+// let contador = 0;
+// function onOff() {
+//     const imgLampada = document.querySelector(".imgBull")
+//     const imgOff = "../img/pic_bulboff.gif"
+//     const imgOn = "../img/pic_bulbon.gif"
 
-    botao.addEventListener("click", ()=>{
+//     imgLampada.src = imgOff
+//     const botao = document.querySelector(".botao")
 
-        if (contador % 2 != 0) {
-            contador = 0
-            imgLampada.src = imgOff
-            botao.textContent = "Ligar"
-        }
-        else {
-            imgLampada.src = imgOn
-            botao.textContent = "Desligar"
-            contador = 1
-        }
-    console.log(contador)
-    })
+//     botao.addEventListener("click", ()=>{
+
+//         if (contador % 2 != 0) {
+//             contador = 0
+//             imgLampada.src = imgOff
+//             botao.textContent = "Ligar"
+//         }
+//         else {
+//             imgLampada.src = imgOn
+//             botao.textContent = "Desligar"
+//             contador = 1
+//         }
+//     console.log(contador)
+//     })
     
-}
-onOff()
+// }
+// onOff()
+
+const inputUser = document.querySelector("input[name='nmUser']");
+const labelUser = document.querySelector("label[for]")
+
+inputUser.addEventListener("focus", ()=>{
+    inputUser.setAttribute("style", "outline-color:#ff0000;");
+})
+
+inputUser.addEventListener("keyup", ()=> {
+    if(inputUser.value.length < 8) {
+        inputUser.setAttribute("style", 'outline-color:#ff0000')
+        labelUser.setAttribute("style", "color:#ff0000")
+    }else{
+        inputUser.setAttribute("style", "outline-color:#dddddd")
+        labelUser.setAttribute("style", "color:#000000")
+    }
+})

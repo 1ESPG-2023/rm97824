@@ -19,19 +19,19 @@
 .container .central img{
     flex-grow: 5;
     width: 500px;
-    height: 350px;
+    height: 100%;
 }
 
 .container .l-e img{
     flex-grow: 1;
     background-color: aqua;
-    height: 350px;
+    height: 100%;
 }
 
 .container .l-d img{
     flex-grow: 1;
     background-color: rgb(60, 255, 86);
-    height: 350px;
+    height: 100%;
 }
 
 .rodape img{
