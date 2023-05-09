@@ -1,16 +1,41 @@
-addEventListener("click", (evento)=>{
-    
-    evento.preventDefault();
-    // console.log(evento.target.id == "btnSubmit");
-    if(evento.target.id == "btnSubmit") {
-        let usuario = document.querySelector("#idUser").value;
-        let senha = document.querySelector("#idPass").value;
+// VAMOS CRIAR UM OBJETO PARA ARMAZENAR O NOSSO USUÁRIO:
+const usuario = {
+    nomeUsuario: "",
+    senhaUsuario: ""
+}
 
-        //VALIDAÇÃO
-        if (usuario == "rm97824" && senha == "12345") {
-            console.log("VALIDADO!")
-        }else{
-            console.log("NÃO VALIDADO!")
-        }
+const usuario1 = {
+    nomeUsuario: "Pedro",
+    senhaUsuario: "12345"
+}
+
+const usuario2 = {
+    nomeUsuario: "Ana",
+    senhaUsuario: "12345"
+}
+
+let listaDeUsuarios = []
+
+listaDeUsuarios.push(usuario1);
+listaDeUsuarios.push(usuario2);
+
+localStorage.setItem("listaUser", listaDeUsuarios);
+
+addEventListener("click", (evento)=>{
+    evento.preventDefault();
+
+    // console.log(evento.target.id == "btnSubmit");
+    if (evento.target.id == "btnSubmit"){
+        usuario.nomeUsuario = document.querySelector("#idUser").value;
+        usuario.senhaUsuario = document.querySelector("#idPass").value;
+        const h1Titulo = document.querySelector("#titulo");
+    // VALIDAÇÃO:
+    if (usuario.nomeUsuario == "Petrus" && usuario.senhaUsuario == "12345"){
+        console.log("VALIDADO");
+        h1Titulo.innerHTML = "Bem Vindo: " + usuario.nomeUsuario;
+    }else{
+        console.log("NÃO VALIDADO")
+        h1Titulo.innerHTML = "";
     }
-})
+    };
+});
